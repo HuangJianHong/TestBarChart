@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <com.cncn.test.constom.view.PaintViewSignature
+        android:id="@+id/signPaintView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llchoose"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/llchoose"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="#cdcdcd"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="again"
+            android:layout_weight="1"
+            android:onClick="again"
+            android:gravity="center"
+            android:background="@drawable/ripple_shape_mask"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="save"
+            android:layout_weight="1"
+            android:onClick="save"
+            android:gravity="center"
+            android:background="@drawable/ripple_with_selector"
+            />
+    </LinearLayout>
+</RelativeLayout>

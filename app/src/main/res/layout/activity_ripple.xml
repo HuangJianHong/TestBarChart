@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ripple"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cncn.www.testbarchart.RippleActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="15dp"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Ripple with no Mask"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:onClick="noMask"
+        android:background="@drawable/ripple_no_mask"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Ripple with color Mask"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:onClick="colorMask"
+        android:background="@drawable/ripple_color_mask"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Ripple with picture Mask"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:onClick="pictureMask"
+        android:background="@drawable/ripple_picture_mask"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Ripple with shape Mask"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:onClick="shapeMask"
+        android:background="@drawable/ripple_shape_mask"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Ripple with selector"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:onClick="selectorRipple"
+        android:background="@drawable/ripple_with_selector"
+        />
+
+
+
+
+
+
+</LinearLayout>

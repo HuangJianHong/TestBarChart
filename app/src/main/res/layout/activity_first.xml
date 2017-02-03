@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cncn.www.testbarchart.FirstActivity"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HotFix"
+            android:textColor="#333333"
+            android:background="#DDDDDD"
+            android:padding="18px"
+            android:onClick="hotfix"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
