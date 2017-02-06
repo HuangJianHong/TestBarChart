@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name="com.cncn.config.App"
@@ -28,7 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.cncn.hotfix.HotFixTest" />
-        <activity android:name="com.cncn.OnTouch.Main4Activity"></activity>
+        <activity android:name="com.cncn.OnTouch.Main4Activity" />
+        <activity android:name="com.cncn.retrofit.RetrofitbaseTest"></activity>
     </application>
 
 </manifest>

@@ -43,6 +43,13 @@
     </LinearLayout>
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rxjava+Retorfit+Okhttp懒人使用"
+        android:onClick="retrofit"
+        />
+
 
 
 
