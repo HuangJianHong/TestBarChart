@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.cncn.OnTouch.Main4Activity;
 import com.cncn.hotfix.HotFixTest;
 
 public class FirstActivity extends AppCompatActivity {
@@ -18,5 +19,9 @@ public class FirstActivity extends AppCompatActivity {
 
     public void hotfix(View view) {
         startActivity(new Intent(this, HotFixTest.class));
+    }
+
+    public void click(View view) {
+        startActivity(new Intent(this, Main4Activity.class));
     }
 }

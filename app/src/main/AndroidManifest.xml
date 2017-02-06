@@ -18,7 +18,7 @@
         <activity android:name=".RippleActivity" />
         <activity android:name="com.cncn.signed.SignedActivity" />
         <activity android:name="com.cncn.signed.SignedResultActivity" />
-        <activity android:name=".ChooseActivity"></activity>
+        <activity android:name=".ChooseActivity" />
         <activity android:name=".PieActivity" />
         <activity android:name=".FirstActivity">
             <intent-filter>
@@ -27,7 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cncn.hotfix.HotFixTest"></activity>
+        <activity android:name="com.cncn.hotfix.HotFixTest" />
+        <activity android:name="com.cncn.OnTouch.Main4Activity"></activity>
     </application>
 
 </manifest>
