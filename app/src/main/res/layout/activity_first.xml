@@ -4,55 +4,48 @@
     android:id="@+id/activity_first"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cncn.www.testbarchart.FirstActivity"
     android:layout_margin="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.cncn.www.testbarchart.FirstActivity">
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:background="#cccccc"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HotFix"
-            android:textColor="#333333"
-            android:background="#DDDDDD"
-            android:padding="18px"
             android:onClick="hotfix"
-            />
+            android:padding="18px"
+            android:text="HotFix:#cccccc "
+            android:textColor="#333333" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="5dp"
-        >
+        android:background="#66cccccc"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="事件分发机制"
-            android:textColor="#333333"
-            android:background="#DDDDDD"
-            android:padding="18px"
             android:onClick="click"
-            />
+            android:padding="18px"
+            android:text="事件分发机制: #66cccccc _40%"
+            android:textColor="#333333" />
     </LinearLayout>
-
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rxjava+Retorfit+Okhttp懒人使用"
+        android:layout_margin="10dp"
+        android:background="#80cccccc"
         android:onClick="retrofit"
-        />
-
-
-
-
-
+        android:text="Rxjava+Retorfit+Okhttp懒人使用:#80cccccc_50%" />
 
 </LinearLayout>
