@@ -1,7 +1,8 @@
 package com.cncn.retrofit2.Api.http.cookie;
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.RxRetrofitApp;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils.AppUtil;
+
+import com.cncn.retrofit2.Api.RxRetrofitApp;
+import com.cncn.utils.AppUtil;
 
 import java.io.IOException;
 
@@ -37,13 +38,13 @@ public class CacheInterceptor implements Interceptor {
                     .build();
         } else {
             int maxStale = 60 * 60 * 6; // 没网失效6小时
-            responseLatest= response.newBuilder()
+            responseLatest = response.newBuilder()
                     .removeHeader("Pragma")
                     .removeHeader("Cache-Control")
                     .header("Cache-Control", "public, only-if-cached, max-stale=" + maxStale)
                     .build();
         }
-        return  responseLatest;
+        return responseLatest;
     }
 
 }

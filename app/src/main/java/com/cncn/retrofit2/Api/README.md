@@ -19,13 +19,13 @@
 
 * 1.moudel导入工程
 
-```java
+``` java
   compile project(':rxretrofitlibrary')
 ```
 
 * 2.初始化设置：Application中初始化
 
-```java
+``` java
 RxRetrofitApp.init(this);
 ```
 
@@ -33,7 +33,7 @@ RxRetrofitApp.init(this);
 
 更多用法请参考demo
 
-```java
+```
     //    完美封装简化版
     private void simpleDo() {
           SubjectPost postEntity = new SubjectPost(simpleOnNextListener,this);

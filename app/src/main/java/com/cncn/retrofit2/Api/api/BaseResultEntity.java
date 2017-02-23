@@ -5,9 +5,9 @@ package com.cncn.retrofit2.Api.api;
  */
 public class BaseResultEntity<T> {
 
-     private int ret ;          //  判断标示： 返回码
-     private String msg;        //    提示信息
-     private T data;            //显示数据（用户需要关心的数据）
+    private int ret;          //  判断标示： 返回码
+    private String msg;        //    提示信息
+    private T data;            //显示数据（用户需要关心的数据）
 
     public int getRet() {
         return ret;

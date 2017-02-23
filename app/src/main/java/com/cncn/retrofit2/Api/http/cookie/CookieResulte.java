@@ -1,8 +1,8 @@
 package com.cncn.retrofit2.Api.http.cookie;
 
 import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
 
 /**
  * post請求緩存数据
@@ -37,27 +37,35 @@ public class CookieResulte {
     @Generated(hash = 2104390000)
     public CookieResulte() {
     }
+
     public long getId() {
         return this.id;
     }
+
     public void setId(long id) {
         this.id = id;
     }
+
     public String getUrl() {
         return this.url;
     }
+
     public void setUrl(String url) {
         this.url = url;
     }
+
     public String getResulte() {
         return this.resulte;
     }
+
     public void setResulte(String resulte) {
         this.resulte = resulte;
     }
+
     public long getTime() {
         return this.time;
     }
+
     public void setTime(long time) {
         this.time = time;
     }

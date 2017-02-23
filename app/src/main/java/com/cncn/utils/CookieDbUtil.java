@@ -3,12 +3,11 @@ package com.cncn.utils;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.RxRetrofitApp;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DaoMaster;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.DaoSession;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.download.HttpDownManager;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.http.cookie.CookieResulte;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.http.cookie.CookieResulteDao;
+import com.cncn.retrofit2.Api.RxRetrofitApp;
+import com.cncn.retrofit2.Api.http.cookie.CookieResulte;
+import com.cncn.retrofit2.Api.http.cookie.CookieResulteDao;
+import com.cncn.retrofit2.Api.http.cookie.DaoMaster;
+import com.cncn.retrofit2.Api.http.cookie.DaoSession;
 
 import org.greenrobot.greendao.query.QueryBuilder;
 
@@ -29,13 +28,14 @@ public class CookieDbUtil {
 
 
     public CookieDbUtil() {
-        context= RxRetrofitApp.getApplication();
+        context = RxRetrofitApp.getApplication();
         openHelper = new DaoMaster.DevOpenHelper(context, dbName);
     }
 
 
     /**
      * 获取单例
+     *
      * @return
      */
     public static CookieDbUtil getInstance() {
@@ -73,21 +73,21 @@ public class CookieDbUtil {
     }
 
 
-    public void saveCookie(CookieResulte info){
+    public void saveCookie(CookieResulte info) {
         DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
         DaoSession daoSession = daoMaster.newSession();
         CookieResulteDao downInfoDao = daoSession.getCookieResulteDao();
         downInfoDao.insert(info);
     }
 
-    public void updateCookie(CookieResulte info){
+    public void updateCookie(CookieResulte info) {
         DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
         DaoSession daoSession = daoMaster.newSession();
         CookieResulteDao downInfoDao = daoSession.getCookieResulteDao();
         downInfoDao.update(info);
     }
 
-    public void deleteCookie(CookieResulte info){
+    public void deleteCookie(CookieResulte info) {
         DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
         DaoSession daoSession = daoMaster.newSession();
         CookieResulteDao downInfoDao = daoSession.getCookieResulteDao();
@@ -95,16 +95,16 @@ public class CookieDbUtil {
     }
 
 
-    public CookieResulte queryCookieBy(String  url) {
+    public CookieResulte queryCookieBy(String url) {
         DaoMaster daoMaster = new DaoMaster(getReadableDatabase());
         DaoSession daoSession = daoMaster.newSession();
         CookieResulteDao downInfoDao = daoSession.getCookieResulteDao();
         QueryBuilder<CookieResulte> qb = downInfoDao.queryBuilder();
         qb.where(CookieResulteDao.Properties.Url.eq(url));
         List<CookieResulte> list = qb.list();
-        if(list.isEmpty()){
+        if (list.isEmpty()) {
             return null;
-        }else{
+        } else {
             return list.get(0);
         }
     }

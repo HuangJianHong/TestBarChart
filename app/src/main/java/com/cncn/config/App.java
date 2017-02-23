@@ -3,6 +3,8 @@ package com.cncn.config;
 import android.app.Application;
 import android.content.Context;
 
+import com.cncn.retrofit2.Api.RxRetrofitApp;
+
 /**
  * <请描述这个类是干什么的>
  *
@@ -23,5 +25,6 @@ public class App extends Application {
         super.onCreate();
         sContext=this;
         JUtils.initialize(this);
+        RxRetrofitApp.init(this);
     }
 }

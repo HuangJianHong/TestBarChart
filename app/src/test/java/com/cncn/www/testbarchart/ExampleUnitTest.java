@@ -1,6 +1,9 @@
 package com.cncn.www.testbarchart;
 
+import org.junit.Test;
+
 import static junit.framework.Assert.assertEquals;
+
 
 /**
  * Example local unit test, which will execute on the development machine (host).

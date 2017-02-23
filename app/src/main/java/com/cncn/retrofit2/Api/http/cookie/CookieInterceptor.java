@@ -1,6 +1,7 @@
 package com.cncn.retrofit2.Api.http.cookie;
 
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils.CookieDbUtil;
+
+import com.cncn.utils.CookieDbUtil;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -25,16 +26,16 @@ public class CookieInterceptor implements Interceptor {
     private String url;
 
     public CookieInterceptor(boolean cache, String url) {
-        dbUtil=CookieDbUtil.getInstance();
-        this.url=url;
-        this.cache=cache;
+        dbUtil = CookieDbUtil.getInstance();
+        this.url = url;
+        this.cache = cache;
     }
 
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
         Response response = chain.proceed(request);
-        if(cache){
+        if (cache) {
             ResponseBody body = response.body();
             BufferedSource source = body.source();
             source.request(Long.MAX_VALUE); // Buffer the entire body.
@@ -45,13 +46,13 @@ public class CookieInterceptor implements Interceptor {
                 charset = contentType.charset(charset);
             }
             String bodyString = buffer.clone().readString(charset);
-            CookieResulte resulte= dbUtil.queryCookieBy(url);
-            long time=System.currentTimeMillis();
+            CookieResulte resulte = dbUtil.queryCookieBy(url);
+            long time = System.currentTimeMillis();
             /*保存和更新本地数据*/
-            if(resulte==null){
-                resulte  =new CookieResulte(url,bodyString,time);
+            if (resulte == null) {
+                resulte = new CookieResulte(url, bodyString, time);
                 dbUtil.saveCookie(resulte);
-            }else{
+            } else {
                 resulte.setResulte(bodyString);
                 resulte.setTime(time);
                 dbUtil.updateCookie(resulte);

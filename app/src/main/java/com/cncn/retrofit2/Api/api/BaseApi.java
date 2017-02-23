@@ -148,4 +148,8 @@ public  abstract  class BaseApi<T> implements Func1<BaseResultEntity<T>, T> {
     public void setCookeiNoNetWorkTime(int cookeiNoNetWorkTime) {
         this.cookeiNoNetWorkTime = cookeiNoNetWorkTime;
     }
+
+    public String getUrl(){
+        return baseUrl+ mothed;
+    }
 }
