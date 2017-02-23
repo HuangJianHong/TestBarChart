@@ -8,6 +8,7 @@ import android.view.View;
 import com.cncn.OnTouch.Main4Activity;
 import com.cncn.hotfix.HotFixTest;
 import com.cncn.retrofit.RetrofitbaseTest;
+import com.cncn.retrofit2.Api.use.TestActivity;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -28,5 +29,9 @@ public class FirstActivity extends AppCompatActivity {
 
     public void retrofit(View view) {
         startActivity(new Intent(this, RetrofitbaseTest.class));
+    }
+
+    public void retrofit2(View view) {
+        startActivity(new Intent(this, TestActivity.class));
     }
 }
