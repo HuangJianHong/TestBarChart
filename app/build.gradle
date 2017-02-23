@@ -10,7 +10,7 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true;
     }
 
     buildTypes {
@@ -25,6 +25,11 @@ android {
         // 指定用 Java8 编译
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
     }
 }
 
@@ -44,6 +49,8 @@ dependencies {
 
     //progressBar
     compile 'com.daimajia.numberprogressbar:library:1.2@aar'
+
+    compile 'org.greenrobot:greendao:3.2.0'  //数据库 GreenDao
 
     //http网络请求：
     /*rx-android-java*/
