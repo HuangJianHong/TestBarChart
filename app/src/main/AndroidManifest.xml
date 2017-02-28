@@ -32,6 +32,7 @@
         <activity android:name="com.cncn.OnTouch.Main4Activity" />
         <activity android:name="com.cncn.retrofit.RetrofitbaseTest" />
         <activity android:name="com.cncn.retrofit2.Api.use.TestActivity"></activity>
+        <activity android:name="com.cncn.LoopereHandle.LoopTest"></activity>
     </application>
 
 </manifest>

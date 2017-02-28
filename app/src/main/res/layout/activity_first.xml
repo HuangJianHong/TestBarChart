@@ -56,4 +56,11 @@
         android:onClick="retrofit2"
         android:text="Rxjava+Retorfit+Okhttp初步封装" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android消息处理机制"
+        android:onClick="handleMessage"
+        />
+
 </LinearLayout>

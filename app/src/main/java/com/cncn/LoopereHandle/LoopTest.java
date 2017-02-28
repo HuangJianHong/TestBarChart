@@ -6,6 +6,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 /**
  * Created by T163 on 2017/2/24.
@@ -42,6 +43,8 @@ public class LoopTest extends AppCompatActivity {
                 Looper.loop();
             }
         }.start();
+
+        for9plus9();
     }
 
 
@@ -61,6 +64,17 @@ public class LoopTest extends AppCompatActivity {
                 }
             };
             Looper.loop();
+        }
+    }
+
+    public void for9plus9(){
+        for (int i = 1, j=1; i < 10; i++) {
+            Log.i("9*9",i +"*" +j +"="+i*j +"\t");
+            if (i == j){
+                i =0;
+                j++;
+                System.out.println();
+            }
         }
     }
 

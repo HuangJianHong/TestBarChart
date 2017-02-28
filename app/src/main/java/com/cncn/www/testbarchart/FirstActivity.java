@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.cncn.LoopereHandle.LoopTest;
 import com.cncn.OnTouch.Main4Activity;
 import com.cncn.hotfix.HotFixTest;
 import com.cncn.retrofit.RetrofitbaseTest;
@@ -33,5 +34,9 @@ public class FirstActivity extends AppCompatActivity {
 
     public void retrofit2(View view) {
         startActivity(new Intent(this, TestActivity.class));
+    }
+
+    public void handleMessage(View view) {
+        startActivity(new Intent(this, LoopTest.class));
     }
 }
