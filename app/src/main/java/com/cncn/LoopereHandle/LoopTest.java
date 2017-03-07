@@ -2,6 +2,7 @@ package com.cncn.LoopereHandle;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 import android.os.PersistableBundle;
@@ -20,6 +21,18 @@ public class LoopTest extends AppCompatActivity {
     *
     * 郭霖： 异步消息处理机制；
     * http://blog.csdn.net/guolin_blog/article/details/9991569
+    *
+    *
+    * Android HandlerThread 完全解析
+    *http://blog.csdn.net/lmj623565791/article/details/47079737
+    *
+    *
+    * Android的几种多线程方式（AsyncTask,HandlerThread,IntentService,ThreadPool），使用场景以及注意事项
+    *http://www.jianshu.com/p/34cffd700f75#
+    * (1) AsyncTask
+    * (2) HandlerThread
+    * (3) IntentService
+    * (4) ThreadPool
     * */
 
     private Handler handlerMain;
@@ -45,6 +58,12 @@ public class LoopTest extends AppCompatActivity {
         }.start();
 
         for9plus9();
+
+
+        HandlerThread handleThread = new HandlerThread("handleThread");
+
+
+
     }
 
 
@@ -67,6 +86,10 @@ public class LoopTest extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * 使用一个For循环，实现9*9乘法表
+     */
     public void for9plus9(){
         for (int i = 1, j=1; i < 10; i++) {
             Log.i("9*9",i +"*" +j +"="+i*j +"\t");
