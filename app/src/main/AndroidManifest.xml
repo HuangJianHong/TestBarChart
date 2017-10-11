@@ -31,8 +31,9 @@
         <activity android:name="com.cncn.hotfix.HotFixTest" />
         <activity android:name="com.cncn.OnTouch.Main4Activity" />
         <activity android:name="com.cncn.retrofit.RetrofitbaseTest" />
-        <activity android:name="com.cncn.retrofit2.Api.use.TestActivity"></activity>
-        <activity android:name="com.cncn.LoopereHandle.LoopTest"></activity>
+        <activity android:name="com.cncn.retrofit2.Api.use.TestActivity" />
+        <activity android:name="com.cncn.LoopereHandle.LoopTest" />
+        <activity android:name="com.cncn.testjava.SimpleActivity"></activity>
     </application>
 
 </manifest>

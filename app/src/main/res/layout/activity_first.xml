@@ -63,4 +63,11 @@
         android:onClick="handleMessage"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="java类的加载顺序"
+        android:onClick="loadOrder"
+        />
+
 </LinearLayout>

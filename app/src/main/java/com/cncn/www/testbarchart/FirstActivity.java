@@ -10,6 +10,7 @@ import com.cncn.OnTouch.Main4Activity;
 import com.cncn.hotfix.HotFixTest;
 import com.cncn.retrofit.RetrofitbaseTest;
 import com.cncn.retrofit2.Api.use.TestActivity;
+import com.cncn.testjava.SimpleActivity;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -38,5 +39,10 @@ public class FirstActivity extends AppCompatActivity {
 
     public void handleMessage(View view) {
         startActivity(new Intent(this, LoopTest.class));
+    }
+
+    //类的加载顺序测试
+    public void loadOrder(View view) {
+        startActivity(new Intent(this, SimpleActivity.class));
     }
 }
