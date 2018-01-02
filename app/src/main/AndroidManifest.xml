@@ -33,7 +33,11 @@
         <activity android:name="com.cncn.retrofit.RetrofitbaseTest" />
         <activity android:name="com.cncn.retrofit2.Api.use.TestActivity" />
         <activity android:name="com.cncn.LoopereHandle.LoopTest" />
-        <activity android:name="com.cncn.testjava.SimpleActivity"></activity>
+        <activity android:name="com.cncn.testjava.SimpleActivity" />
+        <activity
+            android:name=".coordinatetest.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -70,4 +70,15 @@
         android:onClick="loadOrder"
         />
 
+    <Button
+        android:id="@+id/CoordinatorLayoutTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScrollActivity"
+        />
+
+
+
+
+
 </LinearLayout>

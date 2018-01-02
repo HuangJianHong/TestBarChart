@@ -1,8 +1,8 @@
 package com.cncn.www.testbarchart;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.cncn.LoopereHandle.LoopTest;
@@ -11,6 +11,10 @@ import com.cncn.hotfix.HotFixTest;
 import com.cncn.retrofit.RetrofitbaseTest;
 import com.cncn.retrofit2.Api.use.TestActivity;
 import com.cncn.testjava.SimpleActivity;
+import com.cncn.www.testbarchart.coordinatetest.ScrollingActivity;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -18,6 +22,7 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        ButterKnife.bind(this);
     }
 
 
@@ -45,4 +50,20 @@ public class FirstActivity extends AppCompatActivity {
     public void loadOrder(View view) {
         startActivity(new Intent(this, SimpleActivity.class));
     }
+
+    @OnClick({R.id.CoordinatorLayoutTest})
+    public void onViewClick(View view) {
+        switch (view.getId()) {
+            case R.id.CoordinatorLayoutTest:
+                startActivity(new Intent(this, ScrollingActivity.class));
+                break;
+
+            default:
+                break;
+
+        }
+
+    }
+
+
 }
