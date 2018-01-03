@@ -11,10 +11,10 @@ import com.cncn.hotfix.HotFixTest;
 import com.cncn.retrofit.RetrofitbaseTest;
 import com.cncn.retrofit2.Api.use.TestActivity;
 import com.cncn.testjava.SimpleActivity;
-import com.cncn.www.testbarchart.coordinatetest.ScrollingActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import test.js.www.coordinator.ScrollingActivity;
 
 public class FirstActivity extends AppCompatActivity {
 
