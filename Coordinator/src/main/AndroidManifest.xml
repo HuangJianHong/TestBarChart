@@ -13,6 +13,11 @@
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GuideActivity"
+            android:label="@string/title_activity_guide"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="test.js.www.coordinator.do_.do0.Main0Activity"></activity>
     </application>
 
 </manifest>
