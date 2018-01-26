@@ -77,6 +77,12 @@
         android:text="ScrollActivity"
         />
 
+    <Button
+        android:id="@+id/ConstraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="约束性布局"
+        />
 
 
 

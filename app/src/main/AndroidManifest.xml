@@ -35,8 +35,7 @@
         <activity android:name="com.cncn.LoopereHandle.LoopTest" />
         <activity android:name="com.cncn.testjava.SimpleActivity" />
         <activity
-            android:name=".coordinatetest.ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
+            android:name=".ConstaintLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

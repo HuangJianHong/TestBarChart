@@ -51,12 +51,17 @@ public class FirstActivity extends AppCompatActivity {
         startActivity(new Intent(this, SimpleActivity.class));
     }
 
-    @OnClick({R.id.CoordinatorLayoutTest})
+    @OnClick({R.id.CoordinatorLayoutTest, R.id.ConstraintLayout})
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.CoordinatorLayoutTest:
                 startActivity(new Intent(this, ScrollingActivity.class));
                 break;
+
+            case R.id.ConstraintLayout:
+                startActivity(new Intent(this, ConstaintLayoutActivity.class));
+                break;
+
 
             default:
                 break;
