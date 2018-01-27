@@ -36,7 +36,8 @@
         <activity android:name="com.cncn.testjava.SimpleActivity" />
         <activity
             android:name=".ConstaintLayoutActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CardViewActivity"></activity>
     </application>
 
 </manifest>

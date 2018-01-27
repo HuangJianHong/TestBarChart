@@ -84,6 +84,12 @@
         android:text="约束性布局"
         />
 
+    <Button
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CartView控件"
+        />
 
 
 

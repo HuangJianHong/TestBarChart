@@ -51,7 +51,7 @@ public class FirstActivity extends AppCompatActivity {
         startActivity(new Intent(this, SimpleActivity.class));
     }
 
-    @OnClick({R.id.CoordinatorLayoutTest, R.id.ConstraintLayout})
+    @OnClick({R.id.CoordinatorLayoutTest, R.id.ConstraintLayout, R.id.cardView})
     public void onViewClick(View view) {
         switch (view.getId()) {
             case R.id.CoordinatorLayoutTest:
@@ -62,6 +62,9 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(new Intent(this, ConstaintLayoutActivity.class));
                 break;
 
+            case R.id.cardView:
+                startActivity(new Intent(this, CardViewActivity.class));
+                break;
 
             default:
                 break;
