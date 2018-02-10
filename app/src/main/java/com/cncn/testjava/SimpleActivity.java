@@ -1,9 +1,13 @@
 package com.cncn.testjava;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.cncn.www.testbarchart.R;
+
+import java.util.function.Function;
 
 public class SimpleActivity extends Activity {
     //http://www.cnblogs.com/xyczero/p/4002786.html  参考自网页
@@ -30,5 +34,21 @@ public class SimpleActivity extends Activity {
  10-11 16:04:00.788 1119-1119/com.cncn.www.testbarchart I/System.out: Class A:static void aDisplay(): i=5,j=3        //调用方法【方法都是被动调用的，】
  *
  */
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //Java 8双冒号::方法引用操作符            //https://majing.io/posts/10000003971188
+        MyMath myMath = new MyMath();
+        Function<Integer, Double> square1 = myMath::square;
+//        Double apply = square1.apply(5);         //apply方法，真正调用该函数
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Log.i("onStart() java8::= ", square1.apply(3)+"");
+        }
+
+        Runnable runnable = myMath::square;
+        runnable.run();       //需要有run方法，它采取执行
     }
 }
